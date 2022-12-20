@@ -1,0 +1,25 @@
+woff-tools (0:2009.10.04-2-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Thu, 24 Nov 2022 07:21:44 +0800
+
+woff-tools (0:2009.10.04-2) unstable; urgency=medium
+
+  * Promote pkg-fonts team as maintainer, drop Dmitry from uploaders and
+    add myself to uploaders.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- Vasudev Kamath <vasudev@copyninja.info>  Tue, 06 Oct 2015 09:32:39 +0530
+
+woff-tools (0:2009.10.04-1) unstable; urgency=low
+
+  * Initial release (closes: #703996).
+  * debian/patches/CVE-2010-1028.patch: backport a patch from
+    mozilla-central to fix WOFF heap corruption due to integer overflow.
+  * debian/patches/add-overflow-checks.patch: backport a patch from
+    mozilla-central that adds arithmetic overflow checks.
+  * debian/patches/fix-compiler-and-cppcheck-warnings.patch: add a patch
+    to fix some compiler and cppcheck warnings.
+
+ -- Dmitry Shachnev <mitya57@gmail.com>  Thu, 16 May 2013 19:13:17 +0400

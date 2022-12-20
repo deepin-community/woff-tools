@@ -1,0 +1,29 @@
+.TH woff2sfnt 1
+
+.SH NAME
+woff2sfnt \- covert WOFF file to OTF file
+
+.SH SYNOPSIS
+.B woff2sfnt
+[\fB\-v\fR | \fB\-m\fR | \fB\-p\fR] <woff>
+
+.SH DESCRIPTION
+Decode WOFF file \fIwoff\fR, writing OpenType data to stdout.
+
+.SH OPTIONS
+(instead of decoding to OpenType format)
+.TP
+\fB\-h\fR
+Show the help message.
+.TP
+\fB\-v\fR
+Write font version to stdout.
+.TP
+\fB\-m\fR
+Write WOFF metadata block to stdout.
+.TP
+\fB\-p\fR
+Write private data block to stdout
+
+.SH SEE ALSO
+.BR sfnt2woff (1)

@@ -1,0 +1,18 @@
+Source: woff-tools
+Section: fonts
+Priority: optional
+Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
+Uploaders: Vasudev Kamath <vasudev@copyninja.info>
+Build-Depends: debhelper (>= 9), zlib1g-dev
+Standards-Version: 3.9.6
+Homepage: https://people.mozilla.com/~jkew/woff/
+Vcs-Git: git://anonscm.debian.org/pkg-fonts/woff-tools.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-fonts/woff-tools.git
+
+Package: woff-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: tools to convert between OpenType and WOFF formats
+ This package provides two tools:
+  * sfnt2woff: convert OpenType fonts to WOFF fonts,
+  * woff2sfnt: convert WOFF fonts to OpenType fonts.

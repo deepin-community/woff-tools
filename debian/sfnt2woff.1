@@ -1,0 +1,30 @@
+.TH sfnt2woff 1
+
+.SH NAME
+sfnt2woff \- covert OTF file to WOFF file
+
+.SH SYNOPSIS
+.B sfnt2woff
+[\fB\-v\fR \fImaj\fR\.\fImin\fR] [\fB\-m\fR \fImetadata.xml\fR]
+[\fB\-p\fR \fIprivate.dat\fR] \fIotffile\fR
+
+.SH DESCRIPTION
+Package OpenType \fIotffile\fR as WOFF, creating a WOFF file in the same
+directory and with the same basename.
+
+.SH OPTIONS
+.TP
+\fB\-h\fR
+Show the help message and exit.
+.TP
+\fB\-v\fR \fImaj\fR\.\fImin\fR
+Set font version number (major and minor, both integers).
+.TP
+\fB\-m\fR \fImetadata.xml\fR
+Include metadata from \fImetadata.xml\fR (not validated).
+.TP
+\fB\-p\fR \fIprivate.dat\fR
+Include private data block.
+
+.SH SEE ALSO
+.BR woff2sfnt (1)

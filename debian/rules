@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+PARENT_DIRECTORY = $(dir $(firstword $(MAKEFILE_LIST)))/..
+DEB_VERSION = $(word 2,$(shell cd $(PARENT_DIRECTORY) && dpkg-parsechangelog | grep ^Version:))
+UPSTREAM_VERSION = $(word 2,$(subst -, ,$(subst :, ,$(DEB_VERSION))))
+
+export DEB_CFLAGS_MAINT_APPEND = -Wall -Wextra -pedantic
+
+%:
+	dh $@
+
+get-orig-source:
+	cd $(PARENT_DIRECTORY) && \
+	wget https://people.mozilla.com/~jkew/woff/woff-code-latest.zip && \
+	./debian/create-tarball.sh $(UPSTREAM_VERSION)
